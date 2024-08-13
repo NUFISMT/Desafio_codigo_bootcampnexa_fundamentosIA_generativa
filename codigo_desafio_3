@@ -1,0 +1,35 @@
+import sys
+
+# Dicionário associando características aos modelos Claude 3
+caracteristicas_modelos = {
+    "automatizar tarefas": "Claude 3 Opus",
+    "criar aplicações voltadas para o usuário que geram receita": "Claude 3 Opus",
+    "acelerar a pesquisa e o desenvolvimento em diversos setores": "Claude 3 Opus",
+    "equilíbrio ideal entre inteligência e velocidade": "Claude 3 Sonnet",
+    "raciocínio complexo": "Claude 3 Sonnet",
+    "criação de conteúdo diferenciado": "Claude 3 Sonnet",
+    "consultas científicas": "Claude 3 Sonnet",
+    "matemática": "Claude 3 Sonnet",
+    "codificação": "Claude 3 Sonnet",
+    "resposta rápida e capacidade de resposta quase instantânea": "Claude 3 Haiku",
+    "imitação das interações humanas": "Claude 3 Haiku",
+    "moderando conteúdo": "Claude 3 Haiku",
+    "otimização de gerenciamento de inventário": "Claude 3 Haiku",
+    "produzir traduções rápidas e precisas": "Claude 3 Haiku",
+    "resumir dados não estruturados": "Claude 3 Haiku",
+}
+
+# Função para encontrar o modelo correspondente à característica fornecida
+def encontrar_modelo(caracteristica_fornecida):
+    caracteristica_fornecida = caracteristica_fornecida.lower().strip()
+    for chave, valor in caracteristicas_modelos.items():
+        if chave.lower() in caracteristica_fornecida:
+            return valor
+    return "Modelo não encontrado."
+
+# Leitura da entrada do usuário
+caracteristica_fornecida = sys.stdin.readline().strip()
+
+# Encontrar e imprimir o modelo correspondente
+modelo_correspondente = encontrar_modelo(caracteristica_fornecida)
+print(modelo_correspondente)
