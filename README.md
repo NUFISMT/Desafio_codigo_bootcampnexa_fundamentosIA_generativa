@@ -1,0 +1,1 @@
+# Desafio_codigo_bootcampnexa_fundamentosIA_generativa
